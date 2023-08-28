@@ -11,7 +11,12 @@ public class ArrayTasks {
      * Return a String[] array that will list all the seasons of the year, starting with winter.
      */
     public String[] seasonsArray() {
-
+        String[] arr = new String[4];
+        arr[0] = "winter";
+        arr[1] = "spring";
+        arr[2] = "summer";
+        arr[3] = "autumn";
+        return arr;
     }
 
     /**
@@ -25,7 +30,11 @@ public class ArrayTasks {
      * length = 5  -> [1, 2, 3, 4, 5]
      */
     public int[] generateNumbers(int length) {
-
+        int[] arr = new int[length];
+        for (int i = 0; i < length; i++) {
+            arr[i] = i;
+        }
+        return arr;
     }
 
     /**
@@ -37,7 +46,11 @@ public class ArrayTasks {
      * arr = [5, -3, -4] -> sum = -2
      */
     public int totalSum(int[] arr) {
-
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
     }
 
     /**
@@ -50,7 +63,15 @@ public class ArrayTasks {
      * arr = [5, -3, -4],   number = 10    ->  -1
      */
     public int findIndexOfNumber(int[] arr, int number) {
-
+        int num = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == number) {
+                num = arr[i];
+            } else {
+                num = -1;
+            }
+        }
+        return num;
     }
 
     /**
@@ -63,7 +84,13 @@ public class ArrayTasks {
      * arr = ["pineapple", "apple", "pen"] -> ["pen", "apple", "pineapple"]
      */
     public String[] reverseArray(String[] arr) {
-
+        String[] arr2 = new String[arr.length];
+        int length = arr.length;
+        for (int i = 0; i < arr.length; i++) {
+            length -= 1;
+            arr2[length] = arr[i];
+        }
+        return arr2;
     }
 
     /**
@@ -78,7 +105,16 @@ public class ArrayTasks {
      * arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
+        int[] newArr = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                newArr[i] = arr[i];
+            } else {
+                continue;
+            }
 
+        }
+        return newArr;
     }
 
     /**
